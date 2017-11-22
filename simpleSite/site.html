@@ -1,0 +1,45 @@
+ <style>
+	img {
+	width:100%;
+	height:92%;
+	}
+	body {
+	margin:2%;
+	background-color:black;
+	}
+ </style>
+ 
+ <div id="pictures">
+        <img src="images/2.PNG" class="displayImages" value="1">
+        <img src="images/affrontements.PNG" class="displayImages" value="1">
+        <img src="images/correct.PNG" class="displayImages" value="1">
+        <img src="images/1.PNG" class="displayImages" value="1">
+        <img src="images/DLNBusMgmt_2_BgPicture.jpg" class="displayImages" value="1">
+        <img src="images/LSC_1_BgPicture.PNG" class="displayImages" value="1">
+        <img src="images/LSC_2_BgPicture.PNG" class="displayImages" value="1">
+        <img src="images/LSC_9_BgPicture.PNG" class="displayImages" value="1">
+        <img src="images/Screenshot3b.PNG" class="displayImages" value="1">
+        <img src="images/SDCsnip3.PNG" class="displayImages" value="1">
+        <img src="images/SDCsnip4.PNG" class="displayImages" value="1">
+    </div>
+	
+	<script>
+    var myIndex=0;
+    var y;
+    changeImage();  
+    
+    function changeImage(){
+        var i;
+        var x = document.getElementsByClassName("displayImages");     
+        for(i=0; i<x.length;i++){
+            x[i].style.display="none";
+        }
+        myIndex++;
+        if(myIndex > x.length){myIndex=1}
+        {
+            x[myIndex-1].style.display="block";   
+            y=x[myIndex-1];//collects value
+        }   
+        setTimeout(changeImage,7000);
+    };
+</script>
